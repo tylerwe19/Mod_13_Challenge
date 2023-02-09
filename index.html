@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Belly Button Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="#bar">Bar Graph</a>
+          <a class="nav-item nav-link" href="#bubble">Bubble Graph</a>
+        </div>
+      </div>
+    </nav>
+  <!-- Navbar -->
+  <div class="container">
+    <div class="row">
+        <!-- Jumbotron -->
+        <div class="col-md-12 jumbotron text-center p-5 text-center bg-image rounded-3" style="
+        background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.webp');
+        height: 400px;
+        ">
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-white">
+            <h1 class="mb-3" style="color:white;">Belly Button Biodiversity</h1>
+            <h4 class="mb-3" style="color:white;">Use the interactive charts below to explore the dataset</h4>
+            </div>
+            </div>
+            </div>
+            </div>
+            <!-- Jumbotron -->
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="bar"></div>
+        <p>The bar graph above visualizes the Top 10 bacterial species present for each test subject. As you toggle the filter, the Top 10 species present will change to the Test Subject selected.</p>
+      </div>
+      <div class="col-md-5">
+        <div id="gauge"></div>
+        <p>The gauge visual above displays the frequency of the Test Subject washing their belly button of bacteria. Specifically, it shows the number of times per week the subject scrubbed their belly button. </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+        <p>The bubble chart above displays all bacteria found in the Test Subject's belly button and shows the volume of each bacteria in the subject's belly button. The larger bubbles indicate the larger the volume of bacteria found.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="charts.js"></script>
+
+</body>
+
+</html>
